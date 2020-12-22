@@ -27,7 +27,7 @@ textnuevatarea.hover(function() {
 function actualizoGrilla() {
     if (localStorage.tareas != undefined && localStorage.length > 0) {tareas = JSON.parse(localStorage.tareas)}
     for (var i in tareas) {
-        buttonEliminar = "<button class='btn-floating button-small green waves-effect waves-light' onclick='removerTarea(" + i + ")'><i class='material-icons white-text'>check</i></button>"
+        buttonEliminar = "<button class='btn-floating button-small red waves-effect waves-light' onclick='removerTarea(" + i + ")'><i class='material-icons white-text'>delete_forever</i></button>"
         grillaDeTareas += "<tr id='tarea" + i + "'><td>" + tareas[i] + "</td><td class='center'>" + buttonEliminar + "</td></tr>"
     }
     listadotareas.html(grillaDeTareas)
